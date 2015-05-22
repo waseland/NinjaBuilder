@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NinjaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Categorieid" />
+          </Key>
+          <Property Name="Categorieid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naam" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Equipments">
+          <Key>
+            <PropertyRef Name="Equipmentid" />
+          </Key>
+          <Property Name="Equipmentid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Categorieid" Type="int" Nullable="false" />
+          <Property Name="Naam" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_dbo_Equipmentid_dbo_Categories_Categorieid">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Equipments" Type="Self.Equipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categorieid" />
+            </Principal>
+            <Dependent Role="Equipments">
+              <PropertyRef Name="Categorieid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NinjaModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equipments" EntityType="Self.Equipments" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Equipmentid_dbo_Categories_Categorieid" Association="Self.FK_dbo_Equipmentid_dbo_Categories_Categorieid">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Equipments" EntitySet="Equipments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NinjaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Categorieid" />
+          </Key>
+          <Property Name="Categorieid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Equipments" Relationship="Self.FK_dbo_Equipmentid_dbo_Categories_Categorieid" FromRole="Categories" ToRole="Equipments" />
+        </EntityType>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="Equipmentid" />
+          </Key>
+          <Property Name="Equipmentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Categorieid" Type="Int32" Nullable="false" />
+          <Property Name="Naam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_dbo_Equipmentid_dbo_Categories_Categorieid" FromRole="Equipments" ToRole="Categories" />
+        </EntityType>
+        <Association Name="FK_dbo_Equipmentid_dbo_Categories_Categorieid">
+          <End Role="Categories" Type="Self.Category" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Equipments" Type="Self.Equipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categorieid" />
+            </Principal>
+            <Dependent Role="Equipments">
+              <PropertyRef Name="Categorieid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NinjaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Equipments" EntityType="Self.Equipment" />
+          <AssociationSet Name="FK_dbo_Equipmentid_dbo_Categories_Categorieid" Association="Self.FK_dbo_Equipmentid_dbo_Categories_Categorieid">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Equipments" EntitySet="Equipments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NinjaModelStoreContainer" CdmEntityContainer="NinjaEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="NinjaModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Categorieid" ColumnName="Categorieid" />
+                <ScalarProperty Name="Naam" ColumnName="Naam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equipments">
+            <EntityTypeMapping TypeName="NinjaModel.Equipment">
+              <MappingFragment StoreEntitySet="Equipments">
+                <ScalarProperty Name="Equipmentid" ColumnName="Equipmentid" />
+                <ScalarProperty Name="Categorieid" ColumnName="Categorieid" />
+                <ScalarProperty Name="Naam" ColumnName="Naam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
