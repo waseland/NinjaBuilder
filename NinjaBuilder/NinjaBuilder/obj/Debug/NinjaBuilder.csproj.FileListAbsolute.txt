@@ -1,2 +1,0 @@
-C:\Users\Jelmer\Documents\Visual Studio 2013\Projects\NinjaBuilder\NinjaBuilder\bin\Debug\NinjaBuilder.exe.config
-C:\Users\Jelmer\Desktop\NinjaBuilder\NinjaBuilder\NinjaBuilder\bin\Debug\NinjaBuilder.exe.config
