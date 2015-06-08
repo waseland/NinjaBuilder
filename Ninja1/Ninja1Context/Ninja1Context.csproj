@@ -42,7 +42,9 @@
     <Compile Include="Models\Ninja_User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\DummyUserRepository.cs" />
     <Compile Include="Repositories\EquipmentRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

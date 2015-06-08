@@ -42,6 +42,16 @@ namespace Ninja1Context
             er.CreateEquipment(a3);
             Equipment a4 = new Equipment("Legs", 50, 50, 50, e4);
             er.CreateEquipment(a4);
+
+            UserRepository ur = new UserRepository(nc);
+
+            Ninja_User u = new Ninja_User("Jelmer", 1000);
+            ur.CreateUser(u);
+            Ninja_User u1 = new Ninja_User("Guus", 10000);
+            ur.CreateUser(u1);
+            Ninja_User u2 = new Ninja_User("Frans", 3000);
+            ur.CreateUser(u2);
+
             
         }
     }
