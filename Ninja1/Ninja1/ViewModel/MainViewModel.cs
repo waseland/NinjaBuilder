@@ -1,4 +1,9 @@
 using GalaSoft.MvvmLight;
+using Ninja1Context.Context;
+using Ninja1Context.Models;
+using Ninja1Context.Repositories;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Ninja1.ViewModel
 {
@@ -16,19 +21,56 @@ namespace Ninja1.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        /// <summary>
-        /// Initializes a new instance of the MainViewModel class.
-        /// </summary>
+        
+
+        UserViewModel uv;
+        UserRepository userRepo;
+        NinjaContext context;
+
+
+        public string name
+        {
+            get { return uv.name; }
+            set { uv.name = value; RaisePropertyChanged(); }
+        }
+
+
+        public int gold
+        {
+            get { return uv.gold; }
+            set { uv.gold = value; RaisePropertyChanged(); }
+        }
+
+        public ObservableCollection<Equipment> Equipment
+        { 
+            get { return new ObservableCollection<Equipment>(uv.current_equipment); } 
+        }
+        public int strength
+        {
+            get { return uv.strength;  }
+        }
+        public int agility
+        {
+            get { return uv.agility; }
+        }
+        public int intelligence
+        {
+            get { return uv.intelligence; }
+        }
+
+        
+
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            context = new NinjaContext();
+            userRepo = new UserRepository(context);
+
+            IEnumerable<Ninja_User> naming = userRepo.GetAllUser();
+
+            Ninja_User turtle = userRepo.GetUser(1);
+            uv = new UserViewModel(turtle);
         }
+
+
     }
 }

@@ -24,5 +24,12 @@ namespace Ninja1
         {
             InitializeComponent();
         }
+
+        private void toStore(object sender, RoutedEventArgs e)
+        {
+            Store store = new Store();
+            store.Show();
+        }
+
     }
 }

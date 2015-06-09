@@ -1,48 +1,23 @@
-/*
-  In App.xaml:
-  <Application.Resources>
-      <vm:ViewModelLocator xmlns:vm="clr-namespace:Ninja1"
-                           x:Key="Locator" />
-  </Application.Resources>
-  
-  In the View:
-  DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
-
-  You can also use Blend to do all this with the tool's support.
-  See http://www.galasoft.ch/mvvm
-*/
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using Ninja1Context.Context;
+using Ninja1Context.Models;
+using Ninja1Context.Repositories;
+using System.Collections.Generic;
 
 namespace Ninja1.ViewModel
 {
-    /// <summary>
-    /// This class contains static references to all the view models in the
-    /// application and provides an entry point for the bindings.
-    /// </summary>
     public class ViewModelLocator
     {
-        /// <summary>
-        /// Initializes a new instance of the ViewModelLocator class.
-        /// </summary>
+
         public ViewModelLocator()
         {
+            //this.Seed();
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
-
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<StoreViewModel>();
         }
 
         public MainViewModel Main
@@ -52,10 +27,78 @@ namespace Ninja1.ViewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
         }
+
+        public StoreViewModel Store
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<StoreViewModel>();
+            }
+        }
         
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
+        }
+
+
+        public void Seed()
+        {
+            NinjaContext nc = new NinjaContext();
+            UserRepository userRepository = new UserRepository(nc);
+            CategoryRepository cr = new CategoryRepository(nc);
+            EquipmentRepository er = new EquipmentRepository(nc);
+
+            IEnumerable<Ninja_User> users = userRepository.GetAllUser();
+            nc.Equipment.RemoveRange(nc.Equipment);
+            IEnumerable<Equipment> eqsl = er.GetAllEquipment();
+            foreach(Ninja_User u in users)
+            {
+                userRepository.Delete(u.id);
+                userRepository.Save();
+            }
+            
+
+            EquipmentCategory ec = new EquipmentCategory();
+            ec.name = "Helmet";
+            cr.CreateCategory(ec);
+            ec = new EquipmentCategory();
+            ec.name = "Body Armor";
+            cr.CreateCategory(ec);
+            cr.Save();
+
+            Equipment e = new Equipment();
+            e.agility = 100;
+            e.categorie = cr.GetCategory(0);
+            e.intelligence = 100;
+            e.strength = 100;
+            e.name = "Dark Helmet";
+            er.CreateEquipment(e);
+
+            e = new Equipment();
+            e.agility = 100;
+            e.categorie = cr.GetCategory(1);
+            e.intelligence = 100;
+            e.strength = 100;
+            e.name = "Awesome Body Armor";
+            er.CreateEquipment(e);
+            er.Save();
+
+            List<Equipment> equip = new List<Equipment>();
+            equip.Add(er.GetEquipment(0));
+            equip.Add(er.GetEquipment(1));
+
+            Ninja_User nu = new Ninja_User();
+            nu.name = "MyName123";
+            nu.gold = 100;
+            nu.boughtEquipment = equip;
+            nu.currentEquipment = equip;
+            nu.id = 1;
+
+            userRepository.CreateUser(nu);
+            userRepository.Save();
+
+            
         }
     }
 }

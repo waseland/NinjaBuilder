@@ -51,8 +51,8 @@ namespace Ninja1.ViewModel
 
         public EquipmentViewModel()
         {
-            _equipment = new Equipment();
         }
+
         public EquipmentViewModel(Equipment equipment)
         {
             _equipment = equipment;

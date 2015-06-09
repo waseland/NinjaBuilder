@@ -10,8 +10,14 @@ namespace Ninja1Context.Context
 {
     public class NinjaContext : DbContext
     {
-        public DbSet<Equipment> Equipment { get; set; }
-        public DbSet<EquipmentCategory> Category { get; set; }
-        public DbSet<Ninja_User> User { get; set; }
+        public NinjaContext()
+            : base("name=NinjaContext")
+        {
+
+        }
+            public DbSet<Equipment> Equipment { get; set; }
+            public DbSet<EquipmentCategory> Category { get; set; }
+            public DbSet<Ninja_User> User { get; set; }
+
     }
 }

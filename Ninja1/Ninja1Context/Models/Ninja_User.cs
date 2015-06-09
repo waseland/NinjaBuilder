@@ -13,8 +13,8 @@ namespace Ninja1Context.Models
         public int id { get; set; }
         public string name { get; set; }
         public int gold { get; set; }
-        public List<Equipment> current_equipment { get; set; }
-        public List<Equipment> bought_equipment { get; set; }
+        public virtual ICollection<Equipment> currentEquipment { get; set; }
+        public virtual ICollection<Equipment> boughtEquipment { get; set; }
 
         public Ninja_User(string name, int gold)
         {

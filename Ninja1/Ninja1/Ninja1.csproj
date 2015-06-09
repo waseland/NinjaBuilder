@@ -75,9 +75,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Store.xaml.cs">
+      <DependentUpon>Store.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\EquipmentViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\StoreViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
@@ -92,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Store.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -122,10 +130,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Pictures\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Ninja1Context\Ninja1Context.csproj">
       <Project>{a4b3d594-171f-4e75-b254-f15faf57463a}</Project>
       <Name>Ninja1Context</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BodyArmor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BodyArmor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BodyArmor2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BodyArmor3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -33,3 +33,40 @@ C:\Users\School\documents\visual studio 2013\Projects\Ninja1\Ninja1\obj\Debug\Ni
 C:\Users\School\documents\visual studio 2013\Projects\Ninja1\Ninja1\obj\Debug\Ninja1.csproj.GenerateResource.Cache
 C:\Users\School\documents\visual studio 2013\Projects\Ninja1\Ninja1\obj\Debug\Ninja1.exe
 C:\Users\School\documents\visual studio 2013\Projects\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\EntityFramework.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1.exe.config
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1Context.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1Context.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\EntityFramework.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.csprojResolveAssemblyReference.cache
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\MainWindow.g.cs
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\App.g.cs
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1_MarkupCompile.cache
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1_MarkupCompile.lref
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\App.baml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\MainWindow.baml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.g.resources
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.Properties.Resources.resources
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.csproj.GenerateResource.Cache
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.baml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.g.cs
