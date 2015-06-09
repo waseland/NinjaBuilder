@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Ninja1.ViewModel"
         Title="MainWindow" Height="350" Width="525">
-
+        <Window.DataContext>
+             <local:UserListviewModel/>
+         </Window.DataContext>
     
     <Grid>
         <Label Content="Current Ninjas:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="162"/>
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding }" Margin="19,41,78,97" SelectedItem="{Binding SelectedSong}">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Ninjas}" Margin="19,41,78,97" SelectedItem="{Binding SelectedNinja}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200" />
                 <DataGridTextColumn Header="Gold" Binding="{Binding Gold}" Width="100" />
