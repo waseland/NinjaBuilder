@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NinjaModelStoreContainer" CdmEntityContainer="NinjaEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="NinjaModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Categorieid" ColumnName="Categorieid" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="NinjaModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipments">
+          <ScalarProperty Name="Equipmentid" ColumnName="Equipmentid" />
+          <ScalarProperty Name="Categorieid" ColumnName="Categorieid" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
