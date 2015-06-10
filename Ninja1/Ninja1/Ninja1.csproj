@@ -130,7 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pictures\" />
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
@@ -140,16 +139,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BodyArmor.jpg" />
+    <Resource Include="Pictures\BodyArmor1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BodyArmor1.jpg" />
+    <Resource Include="Pictures\BodyArmor2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BodyArmor2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="BodyArmor3.jpg" />
+    <Resource Include="Pictures\BodyArmor3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
