@@ -70,6 +70,7 @@ C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ni
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.baml
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.g.cs
+<<<<<<< HEAD
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\bin\Debug\Ninja1.exe.config
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.exe
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
@@ -109,3 +110,8 @@ C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.Properties.R
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.csproj.GenerateResource.Cache
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\ChooseNinja.baml
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\ChooseNinja.g.cs
+=======
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\bin\Debug\Ninja1.exe.config
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\obj\Debug\Ninja1.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
+>>>>>>> 91d81b7e0420bbea651ae78f3046bc464f48d41a
