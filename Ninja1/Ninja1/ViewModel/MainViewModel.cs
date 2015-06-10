@@ -30,15 +30,15 @@ namespace Ninja1.ViewModel
 
         public string name
         {
-            get { return uv.name; }
-            set { uv.name = value; RaisePropertyChanged(); }
+            get { return uv.Name; }
+            set { uv.Name = value; RaisePropertyChanged(); }
         }
 
 
         public int gold
         {
-            get { return uv.gold; }
-            set { uv.gold = value; RaisePropertyChanged(); }
+            get { return uv.Gold; }
+            set { uv.Gold = value; RaisePropertyChanged(); }
         }
 
         public ObservableCollection<Equipment> Equipment
@@ -60,14 +60,13 @@ namespace Ninja1.ViewModel
 
         
 
-        public MainViewModel()
+        public MainViewModel(int id)
         {
             context = new NinjaContext();
             userRepo = new UserRepository(context);
 
-            IEnumerable<Ninja_User> naming = userRepo.GetAllUser();
-
-            Ninja_User turtle = userRepo.GetUser(1);
+            IEnumerable<Ninja_User> naming = userRepo.GetAllUser();          
+            Ninja_User turtle = userRepo.GetUser(id);
             uv = new UserViewModel(turtle);
         }
 
