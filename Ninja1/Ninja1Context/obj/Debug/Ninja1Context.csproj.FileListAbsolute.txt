@@ -25,3 +25,12 @@ C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1Context\bin\Debug\EntityFramew
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1Context\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1Context\obj\Debug\Ninja1Context.exe
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1Context\obj\Debug\Ninja1Context.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\Ninja1Context.exe.config
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\Ninja1Context.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\Ninja1Context.pdb
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\EntityFramework.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\EntityFramework.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\obj\Debug\Ninja1Context.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1Context\obj\Debug\Ninja1Context.pdb

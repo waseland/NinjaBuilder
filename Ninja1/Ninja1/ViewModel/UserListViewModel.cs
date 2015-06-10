@@ -54,7 +54,6 @@ namespace Ninja1.ViewModel
         {
             var ninjaDetails = new MainWindow();
             ninjaDetails.Show();
-
         }
 
     }

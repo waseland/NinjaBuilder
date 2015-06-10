@@ -15,7 +15,7 @@ namespace Ninja1.ViewModel
 
         public ViewModelLocator()
         {
-            this.Seed();
+            //this.Seed();
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<UserListViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
@@ -109,7 +109,7 @@ namespace Ninja1.ViewModel
 
             e = new Equipment();
             e.agility = 200;
-            e.categorie = cr.GetCategory(3);
+            e.categorie = cr.GetCategory(2);
             e.intelligence = 500;
             e.strength = 200;
             e.name = "Awesome Trousers of Nudity";

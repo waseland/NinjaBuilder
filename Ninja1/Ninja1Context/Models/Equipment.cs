@@ -15,6 +15,7 @@ namespace Ninja1Context.Models
         public int strength { get; set; }
         public int intelligence { get; set; }
         public int agility { get; set; }
+        public int costs { get; set; }
         public virtual EquipmentCategory categorie { get; set; }
         public virtual ICollection<Ninja_User> user { get; set; }
 

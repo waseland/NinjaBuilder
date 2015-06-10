@@ -16,6 +16,7 @@ namespace Ninja1.ViewModel
     {
         NinjaContext nc;
         EquipmentViewModel ev;
+        EquipmentRepository er;
         CategoryRepository cr;
 
         public ObservableCollection<EquipmentCategory> categorys
@@ -35,28 +36,44 @@ namespace Ninja1.ViewModel
             {
                 _selectedCategory = value;
                 RaisePropertyChanged();
+
+                ObservableCollection<Equipment> gear = new ObservableCollection<Equipment>();
+                foreach (Equipment a in er.GetAllEquipment())
+                {
+                    if (a.categorie.name == SelectedCategory.name)
+                    {
+                        gear.Add(a);
+                    }
+                }
+                this.Equipments = gear;
             }
         }
 
-        //public ObservableCollection<Equipment> categorys
-        //{
-        //    get { return new ObservableCollection<EquipmentCategory>(cr.GetAllCategory()); }
-        //}
+        private ObservableCollection<Equipment> _equipments;
 
-        //private EquipmentCategory _selectedCategory;
+        public ObservableCollection<Equipment> Equipments
+        {
+            get { return _equipments; }
+            set {   _equipments = value;
+                    RaisePropertyChanged();
+                }
 
-        //public EquipmentCategory SelectedCategory
-        //{
-        //    get
-        //    {
-        //        return _selectedCategory;
-        //    }
-        //    set
-        //    {
-        //        _selectedCategory = value;
-        //        RaisePropertyChanged();
-        //    }
-        //}
+        }
+
+        private Equipment _selectedEquipment;
+
+        public Equipment SelectedEquipment
+        {
+            get
+            {
+                return _selectedEquipment;
+            }
+            set
+            {
+                _selectedEquipment = value;
+                RaisePropertyChanged();
+            }
+        }
 
 
 
@@ -65,6 +82,7 @@ namespace Ninja1.ViewModel
             nc = new NinjaContext();
             cr = new CategoryRepository(nc);
             ev = new EquipmentViewModel();
+            er = new EquipmentRepository(nc);
         }
 
     }
