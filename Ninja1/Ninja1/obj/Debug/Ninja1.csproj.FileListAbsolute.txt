@@ -70,3 +70,6 @@ C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ni
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.baml
 C:\Users\School\programeren\Source\Repos\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Store.g.cs
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\bin\Debug\Ninja1.exe.config
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\obj\Debug\Ninja1.exe
+C:\Users\School\programeren\Source\Repos\NinjaBuilder2\Ninja1\Ninja1\Ninja1\obj\Debug\Ninja1.pdb
