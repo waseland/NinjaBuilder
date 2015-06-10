@@ -21,12 +21,12 @@ namespace Ninja1.ViewModel
             get { return _user.id; }
             set { _user.id = value; OnPropertyChanged(); }
         }
-        public string name 
+        public string Name 
         {
             get { return _user.name; }
             set { _user.name = value; OnPropertyChanged(); }
         }
-        public int gold
+        public int Gold
         {
             get { return _user.gold; }
             set { _user.gold = value; OnPropertyChanged(); }
@@ -59,6 +59,11 @@ namespace Ninja1.ViewModel
         {
             get { return _user.boughtEquipment; }
             set { _user.boughtEquipment = value; OnPropertyChanged(); }
+        }
+
+        public UserViewModel()
+        {
+            _user = new Ninja_User();
         }
 
         public UserViewModel(Ninja_User user)
