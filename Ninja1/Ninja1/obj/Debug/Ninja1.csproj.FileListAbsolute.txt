@@ -109,3 +109,7 @@ C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.Properties.R
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\Ninja1.csproj.GenerateResource.Cache
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\ChooseNinja.baml
 C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\ChooseNinja.g.cs
+C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\EquipmentCrud.g.cs
+C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\EquipmentCrud.baml
+C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\NewEquipment.baml
+C:\Users\Jelmer\Desktop\NinjaBuilder\Ninja1\Ninja1\obj\Debug\NewEquipment.g.cs

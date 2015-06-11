@@ -1,0 +1,22 @@
+﻿<Window x:Class="Ninja1.NewEquipment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewEquipment" Height="331.343" Width="504.478"
+        xmlns:local="clr-namespace:Ninja1.ViewModel"
+        DataContext="{Binding Equipments, Source={StaticResource Locator}}">
+
+    <Grid Margin="0,0,2,-1">
+        <TextBox Text="{Binding Path= aNewEquipment.name, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="125,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="125,63,0,0" TextWrapping="Wrap" Text="{Binding Path= aNewEquipment.strength, Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="125,108,0,0" TextWrapping="Wrap" Text="{Binding Path= aNewEquipment.agility, Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="125,153,0,0" TextWrapping="Wrap" Text="{Binding Path= aNewEquipment.intelligence, Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Strength" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Categorie" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Intelligence" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Agility" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Width="95"/>
+        <ComboBox HorizontalAlignment="Left" Margin="125,194,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Categories}" DisplayMemberPath="name" SelectedValuePath="id" SelectedItem="{Binding Path=aNewCategorie, Mode=TwoWay}"/>
+        <Button Content="Create Equipment" HorizontalAlignment="Left" Command="{Binding Path=CreateEquipmentCommand}" Margin="365,264,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click"/>
+        
+    </Grid>
+</Window>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ninja1.ViewModel
 {
-    class EquipmentViewModel : INotifyPropertyChanged 
+    public class EquipmentViewModel : INotifyPropertyChanged 
     {
         public int id
         {

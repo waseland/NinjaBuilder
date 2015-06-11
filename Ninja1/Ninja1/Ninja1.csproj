@@ -78,10 +78,17 @@
     <Compile Include="ChooseNinja.xaml.cs">
       <DependentUpon>ChooseNinja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentCrud.xaml.cs">
+      <DependentUpon>EquipmentCrud.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewEquipment.xaml.cs">
+      <DependentUpon>NewEquipment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Store.xaml.cs">
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CategoryViewModel.cs" />
+    <Compile Include="ViewModel\EquipmentListViewModel.cs" />
     <Compile Include="ViewModel\EquipmentViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\StoreViewModel.cs" />
@@ -89,6 +96,10 @@
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="ChooseNinja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentCrud.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,6 +115,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Store.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

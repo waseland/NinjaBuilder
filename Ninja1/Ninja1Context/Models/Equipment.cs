@@ -20,9 +20,11 @@ namespace Ninja1Context.Models
 
         public Equipment(string name, int strength, int intelligence, int agility, EquipmentCategory equipmentCategory)
         {
+            this.name = name;
             this.strength = strength;
             this.intelligence = intelligence;
             this.agility = agility;
+            this.categorie = categorie;
         }
 
         public Equipment() {

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Ninja1.ViewModel
 {
-    class CategoryViewModel : INotifyPropertyChanged
+    public class CategoryViewModel : INotifyPropertyChanged
     {
-        private EquipmentCategory _category;
+        public EquipmentCategory _category { get; set; }
 
         public int id
         {

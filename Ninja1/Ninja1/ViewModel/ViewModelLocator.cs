@@ -15,9 +15,10 @@ namespace Ninja1.ViewModel
 
         public ViewModelLocator()
         {
-            this.Seed();
+            //this.Seed();
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<UserListViewModel>();
+            SimpleIoc.Default.Register<EquipmentListViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<StoreViewModel>();
         }
@@ -45,7 +46,16 @@ namespace Ninja1.ViewModel
                 return ServiceLocator.Current.GetInstance<StoreViewModel>();
             }
         }
-        
+
+        public EquipmentListViewModel Equipments
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<EquipmentListViewModel>();
+            }
+        }
+      
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
