@@ -8,7 +8,7 @@
 
     <Grid>
         <Label Content="Current Equipment:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="162"/>
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Equipments}" Margin="19,41,26,97" SelectedItem="{Binding SelectedUser}">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Equipments}" Margin="19,41,26,97" SelectedItem="{Binding SelectedEquipment}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding name}" Width="250" />
                 <DataGridTextColumn Header="Strength" Binding="{Binding strength}" Width="75" />

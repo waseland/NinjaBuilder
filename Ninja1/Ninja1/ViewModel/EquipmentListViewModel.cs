@@ -36,6 +36,8 @@ namespace Ninja1.ViewModel
 
         public ICommand CreateEquipmentCommand { get; set; }
 
+        public ICommand DeleteEquipmentCommand { get; set; }
+
         public Equipment aNewEquipment
         {
             get { return _equipment; }
@@ -61,7 +63,7 @@ namespace Ninja1.ViewModel
             set
             {
                 _equipmentViewModel = value;
-                RaisePropertyChanged("SelectedUser");
+                RaisePropertyChanged("SelectedEquipment");
             }
         }
 
@@ -80,6 +82,7 @@ namespace Ninja1.ViewModel
 
             NewEquipmentCommand = new RelayCommand(NewEquipment);
             CreateEquipmentCommand = new RelayCommand(CreateEquipment);
+            DeleteEquipmentCommand = new RelayCommand(DeleteEquipment);
         }
 
         public void NewEquipment()
@@ -101,6 +104,19 @@ namespace Ninja1.ViewModel
             equipmentRepo.CreateEquipment(e);
             equipmentRepo.Save();          
 
+        }
+
+        public void DeleteEquipment()
+        {
+            if (equipmentRepo.GetEquipment(SelectedEquipment.id) == null)
+            {
+
+            }
+            else
+            {
+                equipmentRepo.Delete(SelectedEquipment.id);
+                equipmentRepo.Save();
+            }
         }
 
     }
